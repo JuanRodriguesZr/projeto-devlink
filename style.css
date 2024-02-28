@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*Ajustando a margim(margem) e o padding(preenchimento) para 0 para toda a pagina 
+  
+  O box-sizing border box usa a borda da caixa como medida
+  */
+}
+
+body {
+  /*background-image: url(./assets/assets/bg-mobile.jpg);
+  -Aqui foi adicionado uma imagem de fundo-
+  
+  background-repeat: no-repeat;
+  -Aqui por padrão a imagem se repete então essa propriedade tira a repetição-
+  
+  background-position: top center;
+  -Aqui reposicionou a imagem no centro tendo o topo da imagem com o topo da viewport-
+ 
+  background-size: cover;
+  -Aqui colocamos a imagem para preencher a tela inteira-
+  
+  todas as funções foram agrupadas em uma unica linha de código a baixo*/
+  background: url(./assets/assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  /*Estabelecendo essa font inter como padrão*/
+}
+#container {
+  width: 360px;
+  /*largura da caixa*/
+  border: 1px solid blue;
+  /*margin-right: auto;
+  margin-left: auto;
+  height: 712px;*/
+  margin: 56px auto 0px;
+  /*Existe um espaço vazio e ao usar a propriedade "margin" dividimos o espaço para os a direita e esquerda fazendo com que o container fique ao centro 56px a parte de cima e 0px a parte de baixo*/
+  
+}
+
+#profile {
+  text-align: center;
+  /*usando a colocando uma propriedade no pai para alinhar os elementos ao meio*/
+  border: 1px solid red;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  /*A imagem por padrão tem o display inline ou seja não tem como alinhar ao centro usando o margin auto, mas tem formas de se alinhar a primeira é forçar o display block ou usar o pai dela pra alinhar todos os elementos ao centro
+  
+  Display block pega todo o espaço pro elemento
+  Display inline coloca os elementos numa mesma linha
+  */
+}
+
+#profile p {
+  font-weight: 500;
+  /*Colocando o peso 500 na fonte inter*/
+  line-height: 24px;
+  margin-top: 8px;
+}
