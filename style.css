@@ -4,24 +4,23 @@
   box-sizing: border-box;
   /*Ajustando a margim(margem) e o padding(preenchimento) para 0 para toda a pagina 
   
-  O box-sizing border box usa a borda da caixa como medida
-  */
+    O box-sizing border box usa a borda da caixa como medida*/
 }
 
 body {
   /*background-image: url(./assets/assets/bg-mobile.jpg);
-  -Aqui foi adicionado uma imagem de fundo-
+    -Aqui foi adicionado uma imagem de fundo-
   
-  background-repeat: no-repeat;
-  -Aqui por padrão a imagem se repete então essa propriedade tira a repetição-
+    background-repeat: no-repeat;
+    -Aqui por padrão a imagem se repete então essa propriedade tira a repetição-
   
-  background-position: top center;
-  -Aqui reposicionou a imagem no centro tendo o topo da imagem com o topo da viewport-
+    background-position: top center;
+    -Aqui reposicionou a imagem no centro tendo o topo da imagem com o topo da viewport-
  
-  background-size: cover;
-  -Aqui colocamos a imagem para preencher a tela inteira-
+    background-size: cover;
+    -Aqui colocamos a imagem para preencher a tela inteira-
   
-  todas as funções foram agrupadas em uma unica linha de código a baixo*/
+    todas as funções foram agrupadas em uma unica linha de código a baixo*/
   background: url(./assets/assets/bg-mobile.jpg) no-repeat top center/cover;
 }
 body * {
@@ -34,11 +33,11 @@ body * {
   /*largura da caixa*/
   border: 1px solid blue;
   /*margin-right: auto;
-  margin-left: auto;
-  height: 712px;*/
+    margin-left: auto;
+    height: 712px;*/
   margin: 56px auto 0px;
   /*Existe um espaço vazio e ao usar a propriedade "margin" dividimos o espaço para os a direita e esquerda fazendo com que o container fique ao centro 56px a parte de cima e 0px a parte de baixo*/
-  
+  padding: 0px 24px;
 }
 
 #profile {
@@ -52,9 +51,8 @@ body * {
   width: 112px;
   /*A imagem por padrão tem o display inline ou seja não tem como alinhar ao centro usando o margin auto, mas tem formas de se alinhar a primeira é forçar o display block ou usar o pai dela pra alinhar todos os elementos ao centro
   
-  Display block pega todo o espaço pro elemento
-  Display inline coloca os elementos numa mesma linha
-  */
+    Display block pega todo o espaço pro elemento
+    Display inline coloca os elementos numa mesma linha*/
 }
 
 #profile p {
@@ -62,4 +60,78 @@ body * {
   /*Colocando o peso 500 na fonte inter*/
   line-height: 24px;
   margin-top: 8px;
+}
+
+/*links*/
+
+ul {
+  list-style: none;
+  /*Tira os pontinhos/estilo da lista*/
+  display: flex;
+  /*Diferente do display block que ocupa todo o espaço possível e do display inline que coloca tudo numa linha o display flex ajusta os elementos para que caibam dentro da caixa*/
+  flex-direction: column;
+  /*Coloca os elementos em coluna*/
+  gap: 16px;
+  /*Da espaço entre os itens*/
+  padding: 24px 0;
+}
+
+ul li a {
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  /*Alinhando os elementos ao centro. se o display for block e for colocado alin-text center funciona também*/
+  align-items: center;
+  /*alinha a altura do texto ao centro*/
+
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  /*Arredondamento de borda*/
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /*Isso é pra dar suporte ao Safari e outros brosers o efeito de blur*/
+
+  text-decoration: none;
+  /*Tirar as linhas de baixo mas tem o underline e o overline*/
+  font-weight: 500;
+  /*Aqui é a grossura da fonte*/
+
+  transition: background 0.3s;
+  /*Coloca uma transição de 5s para i hover*/
+}
+
+/*Pseudo-selector: propriedade que se altera ao passar o mouse por cima*/
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid white;
+}
+
+/*Social links*/
+
+#social-links {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  /*O font-size aumenta o tamanho dos icones*/
+  justify-content: center;
+}
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+
+  transition: background 0.3s;
+  border-radius: 50%;
+}
+#social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
 }
