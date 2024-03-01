@@ -55,7 +55,7 @@ body * {
   width: 100%;
   max-width: 588px;
   /*largura da caixa é de 100% para dispositivos menores e vai até 588px em dispositivos maiores*/
-  border: 1px solid blue;
+  /*border: 1px solid blue;*/
   /*margin-right: auto;
     margin-left: auto;
     height: 712px;*/
@@ -67,7 +67,7 @@ body * {
 #profile {
   text-align: center;
   /*usando a colocando uma propriedade no pai para alinhar os elementos ao meio*/
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   padding: 24px;
 }
 
@@ -86,7 +86,7 @@ body * {
   margin-top: 8px;
 }
 #switch {
-  border: 1px solid purple;
+  /*border: 1px solid purple;*/
   position: relative;
   width: 64px;
   margin: 4px auto;
@@ -142,7 +142,7 @@ ul {
 }
 
 ul li a {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   display: flex;
   justify-content: center;
   /*Alinhando os elementos ao centro. se o display for block e for colocado alin-text center funciona também*/
