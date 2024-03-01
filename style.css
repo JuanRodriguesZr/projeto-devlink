@@ -6,7 +6,29 @@
   
     O box-sizing border box usa a borda da caixa como medida*/
 }
-
+/*Modo Dark*/
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/assets/moon-stars.svg);
+}
+/*Modo light*/
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --switch-bg-url: url(./assets/assets/sun.svg);
+}
+/*Quando criei uma classe isso abriu a possibilidade de trabalhar com as variáveis o que faz com que eu coloque os valores em cada classe e quando mudar de classe os valores serão aplicados nos devidos lugares que eu estabeleci em cada classe usando o codigo 
+--nome da variável: valor e no codigo
+ código: var(o nome da variável a ser aplicada)*/
 body {
   /*background-image: url(./assets/assets/bg-mobile.jpg);
     -Aqui foi adicionado uma imagem de fundo-
@@ -21,11 +43,11 @@ body {
     -Aqui colocamos a imagem para preencher a tela inteira-
   
     todas as funções foram agrupadas em uma unica linha de código a baixo*/
-  background: url(./assets/assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
+  color: var(--text-color);
   /*Estabelecendo essa font inter como padrão*/
 }
 #container {
@@ -39,7 +61,7 @@ body * {
   /*Existe um espaço vazio e ao usar a propriedade "margin" dividimos o espaço para os a direita e esquerda fazendo com que o container fique ao centro 56px a parte de cima e 0px a parte de baixo*/
   padding: 0px 24px;
 }
-
+/*Profile*/
 #profile {
   text-align: center;
   /*usando a colocando uma propriedade no pai para alinhar os elementos ao meio*/
@@ -61,7 +83,39 @@ body * {
   line-height: 24px;
   margin-top: 8px;
 }
+#switch {
+  border: 1px solid purple;
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
 
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.light #switch button {
+  right: 0;
+  left: initial;
+  /*Esse código é usado pra movimentar o button ao trocar a classe*/
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
 /*links*/
 
 ul {
@@ -85,8 +139,8 @@ ul li a {
   /*alinha a altura do texto ao centro*/
 
   padding: 16px 24px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
   /*Arredondamento de borda*/
 
@@ -105,8 +159,8 @@ ul li a {
 
 /*Pseudo-selector: propriedade que se altera ao passar o mouse por cima*/
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid white;
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 
 /*Social links*/
@@ -128,7 +182,7 @@ ul li a:hover {
   border-radius: 50%;
 }
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--highlight-color);
 }
 footer {
   padding: 24px;
