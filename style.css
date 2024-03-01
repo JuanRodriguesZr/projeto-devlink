@@ -44,6 +44,7 @@ body {
   
     todas as funções foram agrupadas em uma unica linha de código a baixo*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 body * {
   font-family: "Inter", sans-serif;
@@ -189,4 +190,15 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+/*media queries*/
+@media (min-width: 700px) {
+  /*Aqui é uma adaptação do background para dispositivos maiores*/
+  :root {
+    --bg-url: url(./assets/assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  }
 }
