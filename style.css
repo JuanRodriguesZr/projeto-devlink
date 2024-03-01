@@ -51,8 +51,9 @@ body * {
   /*Estabelecendo essa font inter como padrão*/
 }
 #container {
-  width: 360px;
-  /*largura da caixa*/
+  width: 100%;
+  max-width: 588px;
+  /*largura da caixa é de 100% para dispositivos menores e vai até 588px em dispositivos maiores*/
   border: 1px solid blue;
   /*margin-right: auto;
     margin-left: auto;
