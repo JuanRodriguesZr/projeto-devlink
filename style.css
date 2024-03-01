@@ -102,11 +102,20 @@ body * {
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.4s;
 }
+
+#switch button:hover {
+
+  outline:8px solid var(--highlight-color);
+}
+
 .light #switch button {
-  right: 0;
+  animation: slide-in 0.4s forwards;
+  /*right: 0;
   left: initial;
-  /*Esse código é usado pra movimentar o button ao trocar a classe*/
+  Esse código é usado pra movimentar o button ao trocar a classe*/
 }
 #switch span {
   display: block;
@@ -201,4 +210,23 @@ footer {
   .light {
     --bg-url: url(./assets/assets/bg-desktop-light.jpg);
   }
+}
+
+/*Animation*/
+@keyframes slide-in{
+from{
+  left:0;
+}
+to{
+  left:50%;
+}
+}
+
+@keyframes slide-back{
+  from{
+    left:50%
+  }
+to{
+  left:0;
+}
 }
